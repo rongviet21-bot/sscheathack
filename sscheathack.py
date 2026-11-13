@@ -149,7 +149,7 @@ class App:
   self.langbox=ttk.Combobox(top,values=['English','Tiếng Việt'],state='readonly',width=13); self.langbox.current(0); self.langbox.pack(side='right'); self.langbox.bind('<<ComboboxSelected>>',self.change_lang)
   self.notice=ttk.Label(self.root,text='',wraplength=940); self.notice.pack(fill='x',padx=18,pady=(0,10))
   bar=ttk.Frame(self.root,padding=12); bar.pack(fill='x',padx=12)
-  self.scope=ttk.Combobox(bar,values=[],state='readonly',width=40); self.scope.pack(side='left'); self.scope.current(0)
+  self.scope=ttk.Combobox(bar,values=['All accessible drives + user folders','Minecraft folders only'],state='readonly',width=40); self.scope.pack(side='left'); self.scope.current(0)
   self.scanbtn=ttk.Button(bar,text='',command=self.start_scan); self.scanbtn.pack(side='left',padx=8)
   self.pickbtn=ttk.Button(bar,text='',command=self.pick); self.pickbtn.pack(side='left')
   self.monbtn=ttk.Button(bar,text='',command=self.toggle_monitor); self.monbtn.pack(side='right')
